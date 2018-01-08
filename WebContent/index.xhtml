@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+<head>
+<title>Title</title>
+</head>
+
+<body>
+	<h:form id="saveForm">
+		<div>
+			<h:outputLabel value="Name:" />
+			<br></br>
+
+			<h:inputText value="#{student.name}" />
+			<br></br>
+
+			<h:outputLabel value="Department:" />
+
+			<h:inputText value="#{student.department}" />
+			<br></br>
+
+			<h:commandButton value="Save Record"
+				action="#{student.saveStudentRecord}" />
+		</div>
+	</h:form>
+	<h:form id="deleteForm">
+		<div>
+			<h:outputLabel value="Id:" />
+			<br></br>
+			<h:inputText value="#{student.id}" />
+			<br></br>
+			<h:commandButton value="Delete Record"
+				action="#{student.deleteStudentRecord}" />
+		</div>
+	</h:form>
+	<h:form id="updateForm">
+		<div>
+			<h:outputLabel value="Id:" />
+			<br></br>
+
+			<h:inputText value="#{student.id}" />
+			<br></br>
+
+			<h:outputLabel value="Name:" />
+			<br></br>
+
+			<h:inputText value="#{student.name}" />
+			<br></br>
+
+			<h:outputLabel value="Department:" />
+			<br></br>
+
+			<h:inputText value="#{student.department}" />
+			<br></br>
+
+			<h:commandButton value="Update Record"
+				action="#{student.updateStudentDetails}" />
+		</div>
+	</h:form>
+</body>
+
+</html>
